@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R Exchange Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.7.0/dist/ethers.umd.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">R Exchange</div>
+
+  <nav class="nav-links">
+    <a href="#">Swap</a>
+    <a href="#">Liquidity</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Markets</a>
+    <a href="#">Rewards</a>
+  </nav>
+
+  <div class="top-actions">
+    <button class="wallet-btn" onclick="connectWallet()">Connect Wallet</button>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+</header>
+
+<div class="main-wrapper">
+
+  <!-- LEFT -->
+  <section class="chart-panel">
+
+    <div class="pair-header">
+      <div>
+        <h2>RAY / SOL</h2>
+        <p>Live decentralized trading market</p>
+      </div>
+      <div class="live-price" id="livePrice">$0.00</div>
+    </div>
+
+    <div class="chart-box">
+      <iframe
+        src="https://s.tradingview.com/widgetembed/?symbol=BINANCE:SOLUSDT&interval=15&theme=dark"
+        width="100%"
+        height="100%"
+        frameborder="0">
+      </iframe>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h4>24H Volume</h4>
+        <p id="volume">Loading...</p>
+      </div>
+
+      <div class="stat-card">
+        <h4>Market Cap</h4>
+        <p id="marketCap">Loading...</p>
+      </div>
+
+      <div class="stat-card">
+        <h4>Liquidity</h4>
+        <p>$2.4M</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- RIGHT -->
+  <aside class="swap-panel">
+
+    <h3>Buy / Swap</h3>
+
+    <div class="swap-box">
+      <label>From</label>
+      <div class="token-row">
+        <select id="fromToken">
+          <option>SOL</option>
+          <option>ETH</option>
+          <option>USDT</option>
+        </select>
+        <input type="number" id="fromAmount" placeholder="0.0">
+      </div>
+    </div>
+
+    <div class="swap-arrow">⇅</div>
+
+    <div class="swap-box">
+      <label>To</label>
+      <div class="token-row">
+        <select id="toToken">
+          <option>RAY</option>
+          <option>BTC</option>
+          <option>MATIC</option>
+        </select>
+        <input type="number" id="toAmount" placeholder="0.0" readonly>
+      </div>
+    </div>
+
+    <button class="swap-btn" onclick="calculateSwap()">Swap Now</button>
+    <button class="swap-btn deposit-btn" onclick="deposit()">Deposit ETH</button>
+    <button class="swap-btn withdraw-btn" onclick="withdraw()">Withdraw ETH</button>
+
+    <div class="portfolio-card">
+      <h4>Total Portfolio</h4>
+      <p id="portfolioBalance">$12,450.00</p>
+    </div>
+
+    <div class="wallet-info">
+      <p id="wallet">Wallet: Not Connected</p>
+      <p id="balance">Balance: 0 ETH</p>
+      <p id="message"></p>
+    </div>
+
+  </aside>
+
+</div>
+
+</body>
+</html>

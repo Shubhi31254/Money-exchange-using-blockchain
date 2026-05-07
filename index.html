@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R Exchange Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="auth-page">
+
+  <div class="auth-left">
+    <h1>R Exchange</h1>
+    <p>Secure Decentralized Money Exchange Platform powered by Blockchain & Web3</p>
+
+    <ul>
+      <li>✔ Secure Authentication</li>
+      <li>✔ Decentralized Wallet Access</li>
+      <li>✔ Smart Contract Transactions</li>
+      <li>✔ Live Trading Dashboard</li>
+    </ul>
+  </div>
+
+  <div class="auth-right">
+    <div class="auth-card">
+
+      <h2 id="authTitle">Login</h2>
+
+      <input type="email" id="email" placeholder="Enter Gmail Address">
+      <input type="password" id="password" placeholder="Enter Strong Password">
+
+      <button onclick="handleAuth()" id="authSubmitBtn">Secure Login</button>
+
+      <p class="switch-auth">
+        Don’t have an account?
+        <span onclick="switchAuthMode()">Signup</span>
+      </p>
+
+      <p id="authMessage"></p>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
