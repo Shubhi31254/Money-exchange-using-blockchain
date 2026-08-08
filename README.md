@@ -178,7 +178,11 @@ This project helped in understanding:
 * Decentralized applications (DApps)
 
 # Author
+Group Project – Team of 4
+
 Shubhi Saxena
+Mayank
+Lakshya
+Laxika
 
-
-This project is for educational and academic purposes.
+This project is developed for educational and academic purposes.
