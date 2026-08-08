@@ -180,9 +180,6 @@ This project helped in understanding:
 # Author
 Group Project – Team of 4
 
-Shubhi Saxena
-Mayank
-Lakshya
-Laxika
+Shubhi, Mayank, Lakshya, Laxika
 
 This project is developed for educational and academic purposes.
